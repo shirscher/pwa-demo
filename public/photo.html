@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Spiders!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Kittens!</a>
+            </div>
+        </div>
+    </nav>
+    <div id="content" class="container-fluid">
+        <div id="connectionStatus" class="alert alert-warning" style="display:none">
+            You are currently offline. Any requests made will be queued and synced as soon as you are connected again.
+        </div>
+        <h1 id="title"></h1>
+        <div class="jumbotron">
+            <img id="image" />
+        </div>
+        <div id="comments"></div>
+        <div>
+            <h2>New Comment</h2>
+            <div>
+                <textarea name="comment" id="comment-text-input"></textarea>
+            </div>
+            <div>
+                <input id="submitCommentButton" type="button" class="btn" value="Submit" />
+            </div>
+        </div>
+    </div>
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+    <script id="comment-template" type="template">
+        <div class="comment panel">
+            <div class="panel-heading">
+                <span class="comment-time"></span>
+            </div>
+            <div class="panel-body">
+                <div class="comment-text"></div>
+                <span class="comment-status label label-default"></span>
+            </div>
+        </div>
+    </script>
+    <script>
+        var id = getParameterByName('id');
+        loadPhoto(id);
+    </script>
+</body>
+
+</html>

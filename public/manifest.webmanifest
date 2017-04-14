@@ -1,0 +1,17 @@
+{
+    "name": "Kittens are Cute!",
+    "short_name": "Kittens!",
+    "background_color": "#000",
+    "start_url": ".",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/icon100.png",
+            "sizes": "100x100"
+        },
+        {
+            "src": "images/icon200.png",
+            "sizes": "200x200"
+        }
+    ]
+}
